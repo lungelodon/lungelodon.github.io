@@ -51,22 +51,29 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="relative text-foreground hover:text-primary transition-all duration-300 font-medium group py-2"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="hover:scale-105 transition-transform"
+              onClick={() => window.open('/cv.pdf', '_blank')}
+            >
               <Download className="mr-2 h-4 w-4" />
               Download CV
             </Button>
             <Button 
               variant="hero" 
               size="sm"
+              className="hover:scale-105 transition-transform"
               onClick={() => scrollToSection("contact")}
             >
               Let's Connect

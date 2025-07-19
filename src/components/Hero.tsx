@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, BarChart3, TrendingUp, Database } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
+import dataAnalyticsBg from "@/assets/data-analytics-bg.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -11,9 +13,41 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-accent/5 pt-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+      {/* Background with data analytics visuals */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5"
+        style={{
+          backgroundImage: `url(${dataAnalyticsBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.1
+        }}
+      />
+      
+      {/* Floating data elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 opacity-20">
+          <BarChart3 className="h-16 w-16 text-primary animate-pulse" />
+        </div>
+        <div className="absolute top-40 right-20 opacity-20">
+          <TrendingUp className="h-12 w-12 text-primary animate-bounce" />
+        </div>
+        <div className="absolute bottom-40 left-20 opacity-20">
+          <Database className="h-14 w-14 text-primary animate-pulse" />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
+          {/* Profile Photo */}
+          <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
+            <img 
+              src={profilePhoto} 
+              alt="Lungelo Don C Sigudla" 
+              className="w-full h-full object-cover"
+            />
+          </div>
           {/* Badge */}
           <Badge 
             variant="secondary" 

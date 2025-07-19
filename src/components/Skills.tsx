@@ -102,28 +102,57 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skill Categories with Progress Bars */}
+        {/* Skill Categories with Creative Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
+            <Card key={index} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300 group">
               <CardHeader>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                    <category.icon className="h-5 w-5 text-primary-foreground" />
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <category.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
-                  <CardTitle className="text-lg">{category.title}</CardTitle>
+                  <CardTitle className="text-xl">{category.title}</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                {category.skills.map((skill, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className="text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <Progress value={skill.level} className="h-2" />
-                  </div>
-                ))}
+              <CardContent>
+                <div className="grid grid-cols-2 gap-3">
+                  {category.skills.map((skill, idx) => {
+                    const isExpert = skill.level >= 90;
+                    const isAdvanced = skill.level >= 80 && skill.level < 90;
+                    const isIntermediate = skill.level >= 70 && skill.level < 80;
+                    
+                    return (
+                      <div 
+                        key={idx} 
+                        className={`p-3 rounded-lg border-2 transition-all hover:scale-105 cursor-default ${
+                          isExpert 
+                            ? 'border-primary bg-primary/10 shadow-sm' 
+                            : isAdvanced 
+                              ? 'border-primary/60 bg-primary/5' 
+                              : isIntermediate
+                                ? 'border-muted bg-muted/50'
+                                : 'border-muted bg-muted/30'
+                        }`}
+                      >
+                        <div className="text-sm font-medium text-center">{skill.name}</div>
+                        <div className="flex justify-center mt-1">
+                          {isExpert && (
+                            <Badge variant="default" className="text-xs px-2 py-0">Expert</Badge>
+                          )}
+                          {isAdvanced && (
+                            <Badge variant="secondary" className="text-xs px-2 py-0">Advanced</Badge>
+                          )}
+                          {isIntermediate && (
+                            <Badge variant="outline" className="text-xs px-2 py-0">Intermediate</Badge>
+                          )}
+                          {!isExpert && !isAdvanced && !isIntermediate && (
+                            <Badge variant="outline" className="text-xs px-2 py-0 opacity-60">Learning</Badge>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </CardContent>
             </Card>
           ))}
