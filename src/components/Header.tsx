@@ -65,7 +65,12 @@ const Header = () => {
               variant="outline" 
               size="sm"
               className="hover:scale-105 transition-transform"
-              onClick={() => window.open('/cv.pdf', '_blank')}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/lungelo-don-sigudla-cv.pdf';
+                link.download = 'Lungelo-Don-Sigudla-CV.pdf';
+                link.click();
+              }}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV
@@ -105,8 +110,18 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="px-4 pt-4 space-y-2">
-                <Button variant="outline" size="sm" className="w-full">
+               <div className="px-4 pt-4 space-y-2">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/lungelo-don-sigudla-cv.pdf';
+                    link.download = 'Lungelo-Don-Sigudla-CV.pdf';
+                    link.click();
+                  }}
+                >
                   <Download className="mr-2 h-4 w-4" />
                   Download CV
                 </Button>

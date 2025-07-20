@@ -44,8 +44,8 @@ const Hero = () => {
           <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
             <img 
               src={profilePhoto} 
-              alt="Lungelo Don C Sigudla" 
-              className="w-full h-full object-cover"
+              alt="Lungelo Don Sigudla" 
+              className="w-full h-full object-cover object-top"
             />
           </div>
           {/* Badge */}

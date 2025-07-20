@@ -84,6 +84,11 @@ const Skills = () => {
       name: "Intermediate Python Certificate",
       issuer: "SoloLearn",
       status: "Completed"
+    },
+    {
+      name: "Power BI Data Analyst Associate",
+      issuer: "Microsoft",
+      status: "Completed"
     }
   ];
 
@@ -137,7 +142,7 @@ const Skills = () => {
                         <div className="text-sm font-medium text-center">{skill.name}</div>
                         <div className="flex justify-center mt-1">
                           {isExpert && (
-                            <Badge variant="default" className="text-xs px-2 py-0">Expert</Badge>
+                            <Badge variant="default" className="text-xs px-2 py-0">Proficient</Badge>
                           )}
                           {isAdvanced && (
                             <Badge variant="secondary" className="text-xs px-2 py-0">Advanced</Badge>

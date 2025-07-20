@@ -61,7 +61,7 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {contactInfo.map((info, index) => (
+                {contactInfo.filter(info => info.label !== "Location").map((info, index) => (
                   <Card key={index} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
                     <CardContent className="p-4">
                       <div className="flex items-center gap-3">
@@ -123,7 +123,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <Card className="shadow-elegant hover:shadow-glow transition-all duration-300">
-            <CardHeader>
+            <CardHeader className="text-center">
               <CardTitle>Send a Message</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">

@@ -94,12 +94,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
             © {currentYear} Lungelo Sigudla. All rights reserved.
-          </p>
-          <p className="text-primary-foreground/60 text-sm mt-2 sm:mt-0">
-            Powered by data-driven insights
           </p>
         </div>
       </div>
