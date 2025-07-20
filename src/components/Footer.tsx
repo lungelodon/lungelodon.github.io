@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -98,8 +98,8 @@ const Footer = () => {
           <p className="text-primary-foreground/60 text-sm">
             © {currentYear} Lungelo Sigudla. All rights reserved.
           </p>
-          <p className="text-primary-foreground/60 text-sm flex items-center gap-1 mt-2 sm:mt-0">
-            Made with <Heart className="h-4 w-4 text-red-400" fill="currentColor" /> and lots of data
+          <p className="text-primary-foreground/60 text-sm mt-2 sm:mt-0">
+            Powered by data-driven insights
           </p>
         </div>
       </div>

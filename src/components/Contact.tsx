@@ -60,16 +60,16 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {contactInfo.map((info, index) => (
                   <Card key={index} className="border-0 shadow-elegant hover:shadow-glow transition-all duration-300">
                     <CardContent className="p-4">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                          <info.icon className="h-5 w-5 text-primary-foreground" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                          <info.icon className="h-4 w-4 text-primary-foreground" />
                         </div>
-                        <div className="flex-1">
-                          <div className="font-semibold text-sm text-muted-foreground">
+                        <div className="flex-1 min-w-0">
+                          <div className="font-semibold text-xs text-muted-foreground uppercase tracking-wide">
                             {info.label}
                           </div>
                           {info.href ? (
@@ -77,12 +77,12 @@ const Contact = () => {
                               href={info.href}
                               target={info.href.startsWith('http') ? '_blank' : undefined}
                               rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                              className="text-foreground hover:text-primary transition-colors font-medium"
+                              className="text-sm text-foreground hover:text-primary transition-colors font-medium truncate block"
                             >
                               {info.value}
                             </a>
                           ) : (
-                            <div className="text-foreground font-medium">{info.value}</div>
+                            <div className="text-sm text-foreground font-medium truncate">{info.value}</div>
                           )}
                         </div>
                       </div>
@@ -102,8 +102,8 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  I'm currently available for freelance projects and full-time opportunities 
-                  in data science, analytics, and business intelligence roles.
+                  I'm currently available for full-time and part-time opportunities 
+                  in data analyst, data scientist, and business intelligence specialist roles.
                 </p>
                 <div className="space-y-2">
                   <div className="text-sm">

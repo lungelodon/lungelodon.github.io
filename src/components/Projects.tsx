@@ -51,18 +51,33 @@ const Projects = () => {
       ]
     },
     {
-      title: "Healthcare Data Warehouse",
-      description: "Designed and implemented a data warehouse for healthcare analytics, processing patient records and treatment outcomes. Built star schema and created OLAP cubes for multidimensional analysis.",
+      title: "Banking Risk Analytics Platform",
+      description: "Developed a comprehensive risk assessment platform for banking operations, analyzing credit risk, market volatility, and regulatory compliance metrics.",
       icon: Database,
-      category: "Data Engineering",
-      technologies: ["SQL Server", "SSIS", "Power BI", "T-SQL", "Azure Data Factory"],
-      githubUrl: "https://github.com/lungelodon/healthcare-datawarehouse",
-      liveUrl: null,
+      category: "Financial Analytics",
+      technologies: ["Python", "PostgreSQL", "Tableau", "Docker"],
+      githubUrl: "https://github.com/lungelodon/banking-risk-analytics",
+      liveUrl: "https://banking-risk-demo.vercel.app",
       features: [
-        "HIPAA-compliant data architecture",
-        "Automated data quality checks",
-        "Historical data preservation",
-        "Performance optimization"
+        "Credit risk modeling",
+        "Market volatility analysis",
+        "Compliance reporting",
+        "Real-time monitoring"
+      ]
+    },
+    {
+      title: "Cryptocurrency Portfolio Tracker",
+      description: "Built an advanced portfolio management system for cryptocurrency investments with real-time price tracking and performance analytics.",
+      icon: TrendingUp,
+      category: "Financial Analytics",
+      technologies: ["React", "Node.js", "MongoDB", "CoinGecko API"],
+      githubUrl: "https://github.com/lungelodon/crypto-portfolio-tracker",
+      liveUrl: "https://crypto-tracker-demo.vercel.app",
+      features: [
+        "Real-time price tracking",
+        "Portfolio performance metrics",
+        "Risk assessment tools",
+        "Advanced charting"
       ]
     },
     {
@@ -130,7 +145,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <Card 
               key={index} 

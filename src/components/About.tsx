@@ -62,10 +62,10 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
               <p className="text-muted-foreground mb-4">
-                With a BSc in Mathematics and Computer Science from Newcastle High School, 
-                I've developed a strong foundation in analytical thinking and problem-solving. 
-                My career has taken me through various roles where I've consistently delivered 
-                data-driven solutions that impact business outcomes.
+                With strong skills in computer science and mathematics, I specialize in data analytics 
+                across diverse sectors including e-commerce, financial services, and business intelligence. 
+                My expertise spans multiple analytical domains where I consistently deliver 
+                data-driven solutions that create meaningful business impact.
               </p>
               <p className="text-muted-foreground mb-6">
                 From financial data analysis at Antennar (PTY) LTD to web analytics at Polygon (PTY) LTD, 

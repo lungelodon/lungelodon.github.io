@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, Github, Linkedin, Mail, BarChart3, TrendingUp, Database } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
 import dataAnalyticsBg from "@/assets/data-analytics-bg.jpg";
 
 const Hero = () => {
@@ -59,7 +59,7 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight">
-              <span className="block">Lungelo Don C</span>
+              <span className="block">Lungelo Don</span>
               <span className="block bg-gradient-hero bg-clip-text text-transparent">
                 Sigudla
               </span>
