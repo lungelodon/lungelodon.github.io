@@ -136,8 +136,8 @@ const Projects = () => {
           <Badge variant="secondary" className="mb-4">
             Portfolio Projects
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Featured <span className="bg-gradient-primary bg-clip-text text-transparent">Data Projects</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+            My <span className="bg-gradient-primary bg-clip-text text-transparent">Data Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore my data science and analytics projects showcasing expertise in machine learning, 

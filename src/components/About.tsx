@@ -33,7 +33,7 @@ const About = () => {
           <Badge variant="secondary" className="mb-4">
             About Me
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
             Passionate About <span className="bg-gradient-primary bg-clip-text text-transparent">Data Excellence</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

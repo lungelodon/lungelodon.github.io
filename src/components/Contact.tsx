@@ -46,7 +46,7 @@ const Contact = () => {
           <Badge variant="secondary" className="mb-4">
             Get In Touch
           </Badge>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
             Let's <span className="bg-gradient-primary bg-clip-text text-transparent">Collaborate</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

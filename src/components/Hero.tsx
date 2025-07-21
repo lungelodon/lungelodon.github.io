@@ -58,7 +58,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight leading-tight">
               <span className="block">Lungelo Don</span>
               <span className="block bg-gradient-hero bg-clip-text text-transparent">
                 Sigudla
