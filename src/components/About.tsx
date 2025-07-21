@@ -62,7 +62,7 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
               <p className="text-muted-foreground mb-4">
-                I possess strong skills in computer science and mathematics, specializing in data analytics 
+                I have developed strong skills in computer science and mathematics, specializing in data analytics 
                 across diverse sectors including e-commerce, financial services, and business intelligence. 
                 My expertise spans multiple analytical domains where I consistently deliver 
                 data-driven solutions that create meaningful business impact.
