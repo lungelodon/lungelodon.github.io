@@ -23,6 +23,7 @@ endobj
 /Resources <<
 /Font <<
 /F1 5 0 R
+/F2 6 0 R
 >>
 >>
 >>
@@ -30,19 +31,169 @@ endobj
 
 4 0 obj
 <<
-/Length 200
+/Length 3800
 >>
 stream
 BT
-/F1 12 Tf
-50 750 Td
-(Lungelo Don Sigudla - Data Analyst CV) Tj
-0 -20 Td
-(Email: lungelosigudla@gmail.com) Tj
-0 -20 Td
-(Phone: +27 83-426-7848) Tj
+/F2 18 Tf
+150 750 Td
+(LUNGELO DON SIGUDLA) Tj
+/F1 10 Tf
+0 -25 Td
+(+27 83-426-7848 | lungelosigudla@gmail.com | linkedin.com/in/lungelodon) Tj
+
+/F2 12 Tf
 0 -40 Td
-(This is a placeholder CV. Please download the actual CV from the website.) Tj
+(SUMMARY) Tj
+/F1 10 Tf
+0 -20 Td
+(I am a data analyst with experience in different analytics environments. I value insights gained through) Tj
+0 -12 Td
+(rigorous data-driven work. I always make sure work is delivered timely and that data informs meaningful) Tj
+0 -12 Td
+(decisions.) Tj
+
+/F2 12 Tf
+0 -30 Td
+(PROFESSIONAL EXPERIENCE) Tj
+
+/F2 10 Tf
+0 -25 Td
+(UMUZI.ORG \(AFRICAN CODING NETWORK\)) Tj
+/F1 9 Tf
+280 0 Td
+(Johannesburg / SOUTH AFRICA) Tj
+-280 -12 Td
+(Data Science and Data Engineering Bootcamp) Tj
+350 0 Td
+(Jan 2024 - Dec 2024) Tj
+-350 -15 Td
+(I undertook this program to transition from data analyst to data scientist and data engineering roles,) Tj
+0 -12 Td
+(strengthening my capabilities in advanced data processing, statistical modeling, and machine learning.) Tj
+0 -15 Td
+(Skills: Advanced data handling, cleaning, and dataset transformation; statistical modeling; machine) Tj
+0 -12 Td
+(learning \(Python, SQL\); visualization and reporting \(Excel, Tableau\), AI/ML concepts and deployment.) Tj
+
+/F2 10 Tf
+0 -25 Td
+(ANTENNAR \(PTY\) LTD) Tj
+/F1 9 Tf
+280 0 Td
+(Menlo Park, Pretoria / SOUTH AFRICA) Tj
+-280 -12 Td
+/F2 10 Tf
+(Financial Data Analyst) Tj
+/F1 9 Tf
+350 0 Td
+(2021 - 2023) Tj
+-350 -15 Td
+(• Delivered historical insights, predictive models, and scenario analyses for financial planning cycles.) Tj
+0 -12 Td
+(• Maintained financial dashboards in Power BI to monitor KPIs, cashflow, and expenditure trends.) Tj
+0 -12 Td
+(• Structured large volumes of financial data to support variance analysis, forecasting, and reconciliations) Tj
+0 -15 Td
+(Skills: Power BI, Excel \(advanced\), SQL, SAP, Oracle, financial modeling, KPI reporting, forecasting,) Tj
+0 -12 Td
+(variance analysis, master data management, GAAP/IFRS compliance, Lean Six Sigma foundations.) Tj
+
+/F2 10 Tf
+0 -25 Td
+(POLYGON \(PTY\) LTD) Tj
+/F1 9 Tf
+280 0 Td
+(Rosebank, Johannesburg / SOUTH AFRICA) Tj
+-280 -12 Td
+/F2 10 Tf
+(Data Analyst) Tj
+/F1 9 Tf
+350 0 Td
+(2019 - 2021) Tj
+-350 -15 Td
+(• Tracked website traffic and user behavior using Google Analytics to improve marketing strategies.) Tj
+0 -12 Td
+(• Built dashboards in Power BI to visualize trends in visits, bounce rates, and conversions.) Tj
+0 -12 Td
+(• Worked with CRM data \(Salesforce\) to segment users and refine email campaign targeting) Tj
+0 -12 Td
+(• Automated reports for teams to monitor KPIs like session duration and traffic sources.) Tj
+0 -12 Td
+(• Developed Python scripts to automate data retrieval and extraction from structured sources) Tj
+0 -15 Td
+(Skills: Web Analytics, Google Analytics, Power BI, Tableau, Excel, Salesforce, SQL, A/B testing, APIs) Tj
+0 -12 Td
+(Python: NumPy, Pandas, Matplotlib, Seaborn, Selenium, tensorflow, statsmodels.) Tj
+
+/F2 10 Tf
+0 -25 Td
+(BESTMED MEDICAL SCHEME) Tj
+/F1 9 Tf
+280 0 Td
+(Faerie Glen, Pretoria / SOUTH AFRICA) Tj
+-280 -12 Td
+/F2 10 Tf
+(Database Administrator) Tj
+/F1 9 Tf
+350 0 Td
+(2016 - 2018) Tj
+-350 -15 Td
+(Recorded membership information for insurance applications, including personal details and ID numbers.) Tj
+0 -12 Td
+(Ensured accuracy and completeness of forms, verifying all data before processing. Digitized handwritten) Tj
+0 -12 Td
+(forms and transmitted data to the head office for further processing.) Tj
+0 -15 Td
+(Skills: Database Management, Data Entry, Updating and Data Migration, Excel \(VLOOKUP, Macros,) Tj
+0 -12 Td
+(PivotTables\), Data Validation, ETL Process, Data Analysis, Data Report Generation.) Tj
+
+/F2 12 Tf
+0 -30 Td
+(EDUCATION) Tj
+/F1 10 Tf
+0 -20 Td
+(BSc Mathematics and Computer Science) Tj
+0 -15 Td
+(Newcastle High School) Tj
+0 -12 Td
+(Grade 12 Matric - Bachelors Pass) Tj
+
+/F2 12 Tf
+0 -25 Td
+(CERTIFICATIONS & COURSES:) Tj
+/F1 10 Tf
+0 -15 Td
+(• Umuzi.org: Data Science and Data Engineering Bootcamp 2024 \(Completed\)) Tj
+0 -12 Td
+(• Coursera: Data Analysis, Excel Skills for Business: Essentials, Data Visualization with Tableau) Tj
+0 -12 Td
+(• SoloLearn: 1\) Introduction course to Python Certificate 2\) Intermediate course Python Certificate) Tj
+
+/F2 12 Tf
+0 -25 Td
+(CORE COMPETENCIES:) Tj
+/F1 10 Tf
+0 -15 Td
+(Databases: MySQL, PostgreSQL, MS SQL Server) Tj
+0 -12 Td
+(Tools: Git, Github, VScode) Tj
+0 -12 Td
+(Hard Skills: Data Modeling, Data Visualization, Statistical Data Analysis, Google Analytics, Data Analysis) Tj
+0 -12 Td
+(Coding Languages: Python, C++, SQL, C#, MATLAB) Tj
+0 -12 Td
+(Python Packages: NumPy, Pandas, Matplotlib, Seaborn) Tj
+
+0 -20 Td
+(DRIVERS LICENSE: CODE 10) Tj
+
+0 -15 Td
+(INTERESTS: Computer Science, Engineering, Entrepreneurship, Finance, and SDGs, with an interest in) Tj
+0 -12 Td
+(organizational efficiency, business processes, and data-driven decision-making in operations.) Tj
+
 ET
 endstream
 endobj
@@ -55,19 +206,28 @@ endobj
 >>
 endobj
 
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
 xref
-0 6
+0 7
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
 0000000115 00000 n 
 0000000273 00000 n 
-0000000524 00000 n 
+0000004125 00000 n 
+0000004192 00000 n 
 trailer
 <<
-/Size 6
+/Size 7
 /Root 1 0 R
 >>
 startxref
-610
+4264
 %%EOF
