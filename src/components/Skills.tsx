@@ -188,7 +188,7 @@ const Skills = () => {
                 <CardContent className="p-6">
                   <h4 className="font-semibold mb-2">{cert.name}</h4>
                   <p className="text-sm text-muted-foreground mb-2">{cert.issuer}</p>
-                  <Badge variant="secondary" className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
+                  <Badge variant="default" className="bg-primary text-primary-foreground">
                     {cert.status}
                   </Badge>
                 </CardContent>
