@@ -12,7 +12,7 @@ export const projects = [
     technologies: ["SQL", "Excel", "Python", "Jupyter"],
     githubUrl: "https://github.com/lungelodon/telecom-customer-churn-analysis",
     dashboardUrl: null,
-    downloadUrl: "/lungelodon-portfolio-forge/project-files/telecom-churn-analysis.zip",
+    downloadUrl: "/project-files/telecom-churn-analysis.zip",
     features: [
       "Comprehensive SQL data analysis",
       "Python-based exploratory analysis", 
@@ -42,7 +42,7 @@ export const projects = [
     technologies: ["Power BI", "Excel", "DAX"],
     githubUrl: "https://github.com/lungelodon/global-sales-performance-analysis",
     dashboardUrl: "https://app.powerbi.com/view?r=global-sales-demo",
-    downloadUrl: "/lungelodon-portfolio-forge/project-files/global-sales-performance.zip",
+    downloadUrl: "/project-files/global-sales-performance.zip",
     features: [
       "Regional performance analysis",
       "Product profitability insights",
@@ -72,7 +72,7 @@ export const projects = [
     technologies: ["Power BI", "Excel", "DAX"],
     githubUrl: "https://github.com/lungelodon/hr-analytics-employee-attrition",
     dashboardUrl: "https://app.powerbi.com/view?r=hr-analytics-demo",
-    downloadUrl: "/lungelodon-portfolio-forge/project-files/hr-employee-attrition.zip",
+    downloadUrl: "/project-files/hr-employee-attrition.zip",
     features: [
       "Employee attrition analysis",
       "Key retention factor identification",

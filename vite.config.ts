@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/lungelodon-portfolio-forge/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
