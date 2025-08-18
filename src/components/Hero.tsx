@@ -187,9 +187,6 @@ const Hero = () => {
 
           {/* AI Influencers Carousel */}
           <div className="pt-16 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold text-center mb-8 text-foreground">
-              Voices That Shape AI & Data Science
-            </h3>
             <Carousel
               opts={{
                 align: "center",
@@ -209,11 +206,11 @@ const Hero = () => {
                   <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="p-6 rounded-lg bg-card border border-border hover:shadow-md transition-shadow duration-300">
                       <div className="flex flex-col items-center text-center space-y-4">
-                        <img
-                          src={person.image}
-                          alt={person.name}
-                          className="w-20 h-20 rounded-full object-cover border-2 border-primary/20"
-                        />
+                        <div className="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center border-2 border-primary/20">
+                          <span className="text-2xl font-bold text-primary-foreground">
+                            {person.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                          </span>
+                        </div>
                         <div>
                           <h4 className="font-semibold text-lg text-foreground">{person.name}</h4>
                           <p className="text-sm text-muted-foreground mt-1">{person.role}</p>
