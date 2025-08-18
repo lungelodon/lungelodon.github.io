@@ -97,7 +97,8 @@ const Hero = () => {
               size="lg"
               className="px-10 py-4 text-base font-semibold bg-gradient-to-r from-primary via-primary-glow to-accent text-primary-foreground hover:scale-105 transform transition-all duration-300 shadow-elegant hover:shadow-glow border-0"
             >
-              ⚡ Access My Premium Data Analytics Software Suite
+              <Database className="h-5 w-5 mr-2" />
+              Access My Data Software Tools
             </Button>
           </div>
 
