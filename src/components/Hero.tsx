@@ -90,6 +90,17 @@ const Hero = () => {
             </Button>
           </div>
 
+          {/* Data Tools Software Button */}
+          <div className="pt-4">
+            <Button 
+              variant="portfolio" 
+              size="lg"
+              className="px-10 py-4 text-base font-semibold bg-gradient-to-r from-primary via-primary-glow to-accent text-primary-foreground hover:scale-105 transform transition-all duration-300 shadow-elegant hover:shadow-glow border-0"
+            >
+              ⚡ Access My Premium Data Analytics Software Suite
+            </Button>
+          </div>
+
           {/* Social Links */}
           <div className="flex justify-center space-x-6 pt-8">
             <a 
