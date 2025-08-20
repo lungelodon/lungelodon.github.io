@@ -190,14 +190,20 @@ const Hero = () => {
 
           {/* Data Tools Software Button */}
           <div className="pt-4">
-            <Button 
-              variant="portfolio" 
-              size="lg"
-              className="px-10 py-4 text-base font-semibold bg-gradient-to-r from-primary via-primary-glow to-accent text-primary-foreground hover:scale-105 transform transition-all duration-300 shadow-elegant hover:shadow-glow border-0"
+            <a 
+              href="https://lungelosigudla.github.io/analytic-toolbelt/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Database className="h-5 w-5 mr-2" />
-              Access My Data Software Tools
-            </Button>
+              <Button 
+                variant="portfolio" 
+                size="lg"
+                className="px-10 py-4 text-base font-semibold bg-gradient-to-r from-primary via-primary-glow to-accent text-primary-foreground hover:scale-105 transform transition-all duration-300 shadow-elegant hover:shadow-glow border-0"
+              >
+                <Database className="h-5 w-5 mr-2" />
+                Access My Data Software Tools
+              </Button>
+            </a>
           </div>
 
           {/* AI Influencers Carousel */}
