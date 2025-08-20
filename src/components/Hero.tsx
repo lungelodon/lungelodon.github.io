@@ -6,22 +6,24 @@ import Autoplay from "embla-carousel-autoplay";
 import profilePhoto from "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
 import dataAnalyticsBg from "@/assets/data-analytics-bg.jpg";
 
-// Import influencer images
-import andrewNgImg from "@/assets/influencers/andrew-ng.jpg";
-import alexKarpImg from "@/assets/influencers/alex-karp.jpg";
-import jeffDeanImg from "@/assets/influencers/jeff-dean.jpg";
-import samAltmanImg from "@/assets/influencers/sam-altman.jpg";
-import aravindSrinivasImg from "@/assets/influencers/aravind-srinivas.jpg";
-import geoffreyHintonImg from "@/assets/influencers/geoffrey-hinton.jpg";
-import yoshuaBengioImg from "@/assets/influencers/yoshua-bengio.jpg";
-import yannLeCunImg from "@/assets/influencers/yann-lecun.jpg";
-import demisHassabisImg from "@/assets/influencers/demis-hassabis.jpg";
-import feiFeiLiImg from "@/assets/influencers/fei-fei-li.jpg";
-import hilaryMasonImg from "@/assets/influencers/hilary-mason.jpg";
-import djPatilImg from "@/assets/influencers/dj-patil.jpg";
-import cathyOneilImg from "@/assets/influencers/cathy-oneil.jpg";
+// Import influencer images - temporarily using placeholders
+const andrewNgImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const alexKarpImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const jeffDeanImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const samAltmanImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const aravindSrinivasImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const geoffreyHintonImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const yoshuaBengioImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const yannLeCunImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const demisHassabisImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const feiFeiLiImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const hilaryMasonImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const djPatilImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
+const cathyOneilImg = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
 
 const Hero = () => {
+  console.log("Hero component loading...");
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
