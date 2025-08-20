@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/',
+  base: mode === 'production' ? '/lungelo-don-sigudla-cv/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
