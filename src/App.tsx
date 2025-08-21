@@ -8,12 +8,9 @@ import Index from "./pages/Index";
 import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 
-console.log("App.tsx loading...");
-
 const queryClient = new QueryClient();
 
 const App = () => {
-  console.log("App component rendering...");
   
   return (
     <QueryClientProvider client={queryClient}>
