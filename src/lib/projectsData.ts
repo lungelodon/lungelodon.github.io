@@ -1,35 +1,26 @@
 import { Database, BarChart3, TrendingUp, Activity, Target, PieChart, Brain } from "lucide-react";
 
+// Minimal projects data to prevent loading issues on free plans
 export const projects = [
   {
     id: "telecom-churn-analysis",
     title: "Telecom Customer Churn Analysis",
-    shortDescription: "This project involves a deep dive into telecom customer data to understand churn drivers. I used SQL for data manipulation and Python for exploratory analysis, presented in an Excel dashboard for broad accessibility.",
-    description: "Advanced analysis of telecom customer data using SQL for data manipulation and Python for exploratory analysis. The project aims to identify key churn indicators and provide actionable insights through interactive visualizations.",
+    shortDescription: "Deep dive into telecom customer data to understand churn drivers using SQL and Python.",
+    description: "Advanced analysis of telecom customer data using SQL for data manipulation and Python for exploratory analysis.",
     icon: Database,
     category: "Data Analytics", 
-    tools: ["SQL", "Excel", "Python", "Jupyter"],
-    technologies: ["SQL", "Excel", "Python", "Jupyter"],
+    tools: ["SQL", "Excel", "Python"],
+    technologies: ["SQL", "Excel", "Python"],
     githubUrl: "https://github.com/lungelodon/telecom-customer-churn-analysis",
     dashboardUrl: null,
     downloadUrl: "/project-files/telecom-churn-analysis.zip",
-    features: [
-      "Comprehensive SQL data analysis",
-      "Python-based exploratory analysis", 
-      "Interactive Excel dashboard",
-      "Churn prediction insights"
-    ],
+    features: ["SQL analysis", "Python insights", "Excel dashboard"],
     hasLiveDashboard: false,
     powerBi: false,
     tableau: false,
-    projectGoal: "To analyze telecom customer data and identify key factors driving customer churn, providing actionable insights for retention strategies.",
-    dataSource: "The analysis utilizes a comprehensive telecom customer dataset with over 7,000 customer records, including demographics, service usage patterns, billing information, and churn status.",
-    insights: [
-      "Customers with month-to-month contracts show 42% higher churn rates",
-      "Electronic check payment methods correlate with increased churn probability",
-      "Fiber optic internet service customers exhibit higher churn rates than DSL users",
-      "Senior citizens demonstrate lower churn rates despite higher service costs"
-    ]
+    projectGoal: "Analyze telecom customer data and identify key churn factors.",
+    dataSource: "Telecom customer dataset with 7,000+ records.",
+    insights: ["42% higher churn with month-to-month contracts", "Electronic payments increase churn probability"]
   },
   {
     id: "global-sales-performance",
