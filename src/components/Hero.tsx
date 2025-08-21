@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, Github, Linkedin, Mail, BarChart3, TrendingUp, Database } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import profilePhoto from "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
 import dataAnalyticsBg from "@/assets/data-analytics-bg.jpg";
 
@@ -208,48 +206,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* AI Influencers Carousel */}
-          <div className="pt-16 max-w-4xl mx-auto">
-            <Carousel
-              opts={{
-                align: "center",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 4000,
-                  stopOnInteraction: true,
-                  stopOnMouseEnter: true,
-                }),
-              ]}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {aiInfluencers.map((person, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-6 rounded-lg bg-card border border-border hover:shadow-md transition-shadow duration-300">
-                      <div className="flex flex-col items-center text-center space-y-4">
-                        <img
-                          src={person.image}
-                          alt={person.name}
-                          className="w-20 h-20 rounded-full object-cover border-2 border-primary/20"
-                        />
-                        <div>
-                          <h4 className="font-semibold text-lg text-foreground">{person.name}</h4>
-                          <p className="text-sm text-muted-foreground mt-1">{person.role}</p>
-                        </div>
-                        <blockquote className="text-sm italic text-muted-foreground leading-relaxed">
-                          "{person.quote}"
-                        </blockquote>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
-          </div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 pt-8">

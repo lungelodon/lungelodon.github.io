@@ -6,6 +6,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import AIInfluencers from "@/components/AIInfluencers";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <Projects />
       <Skills />
       <Contact />
+      <AIInfluencers />
       <Footer />
     </div>
   );
