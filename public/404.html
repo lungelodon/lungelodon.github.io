@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+    <title>Lungelo Don Sigudla - Data Analytics Portfolio</title>
     <script>
-      // GitHub Pages SPA redirect
-      sessionStorage.redirect = location.href;
+      // GitHub Pages SPA redirect for HashRouter
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, '', redirect);
+      }
+      // Redirect to home with hash
+      window.location.replace('/#/');
     </script>
-    <meta http-equiv="refresh" content="0;URL='/'">
   </head>
   <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to portfolio...</p>
   </body>
 </html>
