@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, Github, Linkedin, Mail, BarChart3, TrendingUp, Database } from "lucide-react";
 const profilePhoto = "/lovable-uploads/c005205c-0af7-4a6b-930a-b0915e65f981.png";
-import dataAnalyticsBg from "@/assets/data-analytics-bg.jpg";
+// Removed large background image to fix memory issues
 
 const Hero = () => {
   
@@ -16,16 +16,8 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Background with data analytics visuals */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5"
-        style={{
-          backgroundImage: `url(${dataAnalyticsBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.1
-        }}
-      />
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5" />
       
       {/* Floating data elements */}
       <div className="absolute inset-0 overflow-hidden">
