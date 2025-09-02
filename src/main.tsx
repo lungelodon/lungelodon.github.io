@@ -6,7 +6,9 @@ import './index.css'
 const redirect = sessionStorage.redirect;
 delete sessionStorage.redirect;
 if (redirect && redirect !== location.href) {
-  history.replaceState(null, '', redirect);
+  // Extract the path from the redirect URL
+  const redirectUrl = new URL(redirect);
+  history.replaceState(null, '', redirectUrl.pathname + redirectUrl.search + redirectUrl.hash);
 }
 
 createRoot(document.getElementById("root")!).render(<App />);
