@@ -17,10 +17,102 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lungelodon" />
     <meta name="twitter:image" content="https://lungelodon.github.io/lungelo-don-sigudla-cv.pdf" />
+    
+    <!-- Add inline loading styles to prevent FOUC and show immediate feedback -->
+    <style>
+      /* Loading indicator visible before React loads */
+      #loading-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-family: system-ui, -apple-system, sans-serif;
+        color: white;
+      }
+      
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Hide loading indicator once React takes over */
+      .react-loaded #loading-indicator {
+        display: none;
+      }
+    </style>
+    
+    <script>
+      console.log('🏁 HTML head loaded');
+      console.log('📍 Current location:', window.location.href);
+      
+      // Track loading performance
+      window.loadingStart = performance.now();
+      
+      // Add error tracking for resource loading
+      window.addEventListener('error', function(e) {
+        if (e.target !== window) {
+          console.error('❌ Resource failed to load:', {
+            element: e.target.tagName,
+            source: e.target.src || e.target.href,
+            error: e.message
+          });
+        }
+      });
+      
+      // Log when DOM is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('📄 DOM Content Loaded');
+        console.log('⏱️ DOM load time:', performance.now() - window.loadingStart, 'ms');
+      });
+    </script>
   </head>
 
   <body>
+    <!-- Loading indicator shown immediately -->
+    <div id="loading-indicator">
+      <div style="text-align: center;">
+        <div class="spinner"></div>
+        <h2>Loading Portfolio...</h2>
+        <p>Lungelo Don Sigudla - Data Analytics</p>
+        <small>If this takes more than 10 seconds, there may be an issue.</small>
+      </div>
+    </div>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      // Remove loading indicator after 15 seconds if React hasn't loaded
+      setTimeout(function() {
+        const loadingIndicator = document.getElementById('loading-indicator');
+        if (loadingIndicator && loadingIndicator.style.display !== 'none') {
+          console.error('❌ React app failed to load within 15 seconds');
+          loadingIndicator.innerHTML = `
+            <div style="text-align: center;">
+              <h2>⚠️ Loading Failed</h2>
+              <p>The application failed to load properly.</p>
+              <p><a href="/test.html" style="color: white; text-decoration: underline;">Test Deployment Status</a></p>
+              <p><a href="javascript:window.location.reload()" style="color: white; text-decoration: underline;">Try Reload</a></p>
+            </div>
+          `;
+        }
+      }, 15000);
+    </script>
   </body>
 </html>

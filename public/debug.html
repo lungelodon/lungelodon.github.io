@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Debug Info</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .section {
+            background: #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #00ff00;
+        }
+        .error { border-left-color: #ff0000; color: #ff6666; }
+        .warning { border-left-color: #ffaa00; color: #ffcc66; }
+        .success { border-left-color: #00ff00; color: #66ff66; }
+        pre {
+            background: #333;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover { background: #45a049; }
+        .test-btn { background: #2196F3; }
+        .test-btn:hover { background: #1976D2; }
+    </style>
+</head>
+<body>
+    <h1>🔍 GitHub Pages Debug Dashboard</h1>
+    <p><strong>Lungelo Don Sigudla Portfolio</strong> - Deployment Diagnostics</p>
+
+    <div class="section success">
+        <h2>✅ GitHub Pages Status</h2>
+        <p>If you can see this page, GitHub Pages is working correctly.</p>
+        <p><strong>Current URL:</strong> <span id="current-url"></span></p>
+        <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+    </div>
+
+    <div class="section">
+        <h2>🌐 Environment Information</h2>
+        <pre id="env-info">Loading...</pre>
+    </div>
+
+    <div class="section">
+        <h2>📊 Performance Tests</h2>
+        <button onclick="testMainSite()">Test Main Site (/)</button>
+        <button onclick="testAssets()" class="test-btn">Test Assets Loading</button>
+        <button onclick="testJavaScript()" class="test-btn">Test JavaScript</button>
+        <div id="test-results"></div>
+    </div>
+
+    <div class="section">
+        <h2>🔗 Quick Links</h2>
+        <p><strong>Main Site:</strong> <a href="/" style="color: #66ff66;">https://lungelodon.github.io/</a></p>
+        <p><strong>Test Page:</strong> <a href="/test.html" style="color: #66ff66;">Static Test</a></p>
+        <p><strong>Projects:</strong> <a href="/project/telecom-churn-analysis" style="color: #66ff66;">Sample Project</a></p>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Troubleshooting Steps</h2>
+        <ol>
+            <li>Check if main site loads at <a href="/">lungelodon.github.io</a></li>
+            <li>Open browser console (F12) to see JavaScript errors</li>
+            <li>Check Network tab for failed resource loading</li>
+            <li>Verify GitHub Actions are completing successfully</li>
+            <li>Test with different browsers and devices</li>
+        </ol>
+    </div>
+
+    <div class="section warning">
+        <h2>⚠️ Common Issues</h2>
+        <ul>
+            <li><strong>Blank Page:</strong> Usually JavaScript loading or execution error</li>
+            <li><strong>CSS Missing:</strong> Asset path or build configuration issue</li>
+            <li><strong>404 Errors:</strong> GitHub Pages not properly configured</li>
+            <li><strong>Slow Loading:</strong> Large assets or network issues</li>
+        </ul>
+    </div>
+
+    <script>
+        // Update current info
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        // Environment information
+        const envInfo = {
+            'User Agent': navigator.userAgent,
+            'Screen Resolution': `${screen.width}x${screen.height}`,
+            'Viewport': `${window.innerWidth}x${window.innerHeight}`,
+            'Color Depth': `${screen.colorDepth}-bit`,
+            'Language': navigator.language,
+            'Platform': navigator.platform,
+            'Online': navigator.onLine ? 'Yes' : 'No',
+            'Cookies Enabled': navigator.cookieEnabled ? 'Yes' : 'No',
+            'Local Storage': typeof(Storage) !== "undefined" ? 'Available' : 'Not Available',
+            'Current Time': new Date().toISOString(),
+            'Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone
+        };
+
+        document.getElementById('env-info').textContent = 
+            Object.entries(envInfo).map(([key, value]) => `${key}: ${value}`).join('\n');
+
+        // Test functions
+        function testMainSite() {
+            const results = document.getElementById('test-results');
+            results.innerHTML = '<p>🔄 Testing main site...</p>';
+            
+            fetch('/')
+                .then(response => {
+                    if (response.ok) {
+                        results.innerHTML += '<p class="success">✅ Main site responds (HTTP ' + response.status + ')</p>';
+                        return response.text();
+                    } else {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                })
+                .then(html => {
+                    if (html.includes('<div id="root">')) {
+                        results.innerHTML += '<p class="success">✅ HTML structure looks correct</p>';
+                    } else {
+                        results.innerHTML += '<p class="error">❌ HTML structure missing root element</p>';
+                    }
+                })
+                .catch(error => {
+                    results.innerHTML += '<p class="error">❌ Main site test failed: ' + error.message + '</p>';
+                });
+        }
+
+        function testAssets() {
+            const results = document.getElementById('test-results');
+            results.innerHTML = '<p>🔄 Testing assets...</p>';
+
+            const tests = [
+                { url: '/favicon.png', name: 'Favicon' },
+                { url: '/assets/', name: 'Assets directory' },
+            ];
+
+            tests.forEach(test => {
+                fetch(test.url)
+                    .then(response => {
+                        if (response.ok) {
+                            results.innerHTML += `<p class="success">✅ ${test.name} loads correctly</p>`;
+                        } else {
+                            results.innerHTML += `<p class="warning">⚠️ ${test.name} returned HTTP ${response.status}</p>`;
+                        }
+                    })
+                    .catch(error => {
+                        results.innerHTML += `<p class="error">❌ ${test.name} failed: ${error.message}</p>`;
+                    });
+            });
+        }
+
+        function testJavaScript() {
+            const results = document.getElementById('test-results');
+            results.innerHTML = '<p>🔄 Testing JavaScript capabilities...</p>';
+
+            // Test basic JavaScript features
+            try {
+                // ES6 features
+                const testArray = [1, 2, 3];
+                const doubled = testArray.map(x => x * 2);
+                results.innerHTML += '<p class="success">✅ ES6 arrow functions work</p>';
+
+                // Modern JavaScript features
+                const testPromise = new Promise(resolve => resolve('test'));
+                results.innerHTML += '<p class="success">✅ Promises available</p>';
+
+                // DOM manipulation
+                const testDiv = document.createElement('div');
+                results.innerHTML += '<p class="success">✅ DOM manipulation works</p>';
+
+                // Local Storage
+                localStorage.setItem('test', 'value');
+                localStorage.removeItem('test');
+                results.innerHTML += '<p class="success">✅ Local Storage works</p>';
+
+            } catch (error) {
+                results.innerHTML += '<p class="error">❌ JavaScript test failed: ' + error.message + '</p>';
+            }
+        }
+
+        console.log('🔍 Debug page loaded successfully');
+        console.log('Environment:', envInfo);
+    </script>
+</body>
+</html>

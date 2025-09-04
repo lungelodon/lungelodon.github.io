@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .status {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 GitHub Pages Test Page</h1>
+    <div class="status">
+        <h2>✅ GitHub Pages is Working!</h2>
+        <p>If you can see this page at <strong>https://lungelodon.github.io/test.html</strong>, then GitHub Pages is deployed correctly.</p>
+        <p>The issue is with the React app, not the GitHub Pages deployment.</p>
+    </div>
+    
+    <div class="status">
+        <h3>Deployment Info:</h3>
+        <p><strong>Repository:</strong> lungelodon.github.io</p>
+        <p><strong>Domain:</strong> https://lungelodon.github.io/</p>
+        <p><strong>Time:</strong> <span id="timestamp"></span></p>
+    </div>
+
+    <div class="status">
+        <p><a href="/" style="color: white; text-decoration: underline;">← Back to Main Site</a></p>
+    </div>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        console.log('GitHub Pages test page loaded successfully');
+    </script>
+</body>
+</html>

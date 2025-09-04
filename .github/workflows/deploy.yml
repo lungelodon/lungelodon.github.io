@@ -29,11 +29,23 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
-        
-      - name: Build
-        run: npm run build
-        
+        run: |
+          echo "📦 Installing dependencies..."
+          npm ci
+          
+      - name: Build project
+        run: |
+          echo "🔨 Building project for GitHub Pages..."
+          npm run build
+          echo "✅ Build completed"
+          
+      - name: List build output
+        run: |
+          echo "📁 Build output contents:"
+          ls -la dist/
+          echo "📄 dist/index.html:"
+          cat dist/index.html
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
@@ -52,3 +64,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
+      - name: Display deployment URL
+        run: |
+          echo "🚀 Deployed to: ${{ steps.deployment.outputs.page_url }}"

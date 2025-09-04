@@ -4,14 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+      .redirect-info {
+        background: rgba(255,255,255,0.1);
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 600px;
+      }
+    </style>
     <script>
-      // GitHub Pages SPA redirect - store the full URL for BrowserRouter
-      sessionStorage.redirect = location.href;
-      location.replace('/');
+      console.log('🔄 GitHub Pages 404.html executing...');
+      console.log('📍 Original URL:', location.href);
+      
+      try {
+        // Store the full URL for BrowserRouter to handle
+        sessionStorage.redirect = location.href;
+        console.log('💾 Stored redirect URL:', sessionStorage.redirect);
+        
+        // Redirect to home page immediately
+        console.log('➡️ Redirecting to home page...');
+        location.replace('/');
+      } catch (error) {
+        console.error('❌ Error in 404.html redirect:', error);
+        
+        // Backup: try direct navigation
+        setTimeout(function() {
+          window.location.href = '/';
+        }, 100);
+      }
     </script>
-    
   </head>
   <body>
-    <p>Redirecting...</p>
+    <div class="redirect-info">
+      <h2>🔄 Redirecting...</h2>
+      <p>GitHub Pages SPA redirect in progress.</p>
+      <p><small>If you're not redirected automatically, <a href="/" style="color: white;">click here</a>.</small></p>
+      
+      <script>
+        // Show fallback message after 3 seconds
+        setTimeout(function() {
+          document.body.innerHTML = `
+            <div class="redirect-info">
+              <h2>⚠️ Redirect Issue</h2>
+              <p>The automatic redirect didn't work as expected.</p>
+              <p><a href="/" style="color: white; text-decoration: underline; font-size: 18px;">→ Go to Home Page</a></p>
+              <p><a href="/test.html" style="color: white; text-decoration: underline;">→ Test Deployment</a></p>
+              <details style="margin-top: 20px; text-align: left;">
+                <summary style="cursor: pointer;">Debug Info</summary>
+                <pre style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; font-size: 12px;">
+Current URL: ${location.href}
+User Agent: ${navigator.userAgent}
+Time: ${new Date().toISOString()}
+                </pre>
+              </details>
+            </div>
+          `;
+        }, 3000);
+      </script>
+    </div>
   </body>
 </html>
